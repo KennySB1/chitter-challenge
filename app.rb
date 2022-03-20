@@ -1,6 +1,6 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
-require './lib/chitter_backend'
+require './lib/Chitter'
 
 class Chitter < Sinatra::Base
   configure :development do
@@ -8,6 +8,8 @@ class Chitter < Sinatra::Base
   end
 
   get '/' do
+
+    @peeps = Chitter.peeps
     erb :index
   end
 

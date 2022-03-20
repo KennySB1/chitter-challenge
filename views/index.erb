@@ -1,1 +1,5 @@
-Hello World! There will be peeps here!
+<ul>
+  <%  @peeps.each do |peep| %>
+    <li> <a href='<%= peep.content %>'></a> </li>
+  <% end %>
+</ul>
